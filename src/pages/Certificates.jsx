@@ -21,15 +21,6 @@ const Certificates = () => {
       color: "#2ec866"
     },
     {
-      title: "AINCAT 2026 Career Aptitude Test",
-      issuer: "Naukri Campus",
-      date: "June 2026",
-      credentialId: "6a198d05542fee52d123f364",
-      link: null,
-      image: null,
-      color: "#e22e5d"
-    },
-    {
       title: "Introduction to Internet of Things (Elite)",
       issuer: "NPTEL",
       date: "Jul-Oct 2025",
@@ -48,15 +39,6 @@ const Certificates = () => {
       color: "#0073e6"
     },
     {
-      title: "Future Interns Internship",
-      issuer: "Future Interns",
-      date: "2024",
-      credentialId: null,
-      link: null,
-      image: "/Future Interns Internship.png",
-      color: "#3b82f6"
-    },
-    {
       title: "Oracle Cloud Infrastructure",
       issuer: "Oracle",
       date: "2024",
@@ -72,6 +54,15 @@ const Certificates = () => {
       credentialId: null,
       link: null,
       image: "/Udemy-MERN stack.png",
+      color: "#a435f0"
+    },
+    {
+      title: "The Complete AI Guide: Learn ChatGPT, Generative AI & More",
+      issuer: "Udemy",
+      date: "2024",
+      credentialId: null,
+      link: null,
+      image: null,
       color: "#a435f0"
     }
   ];
