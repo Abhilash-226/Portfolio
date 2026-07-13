@@ -3,6 +3,15 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 const Certificates = () => {
   const certificates = [
     {
+      title: "Claude Code in Action",
+      issuer: "Anthropic",
+      date: "March 14, 2026",
+      credentialId: "hfi6k4te2szx",
+      link: "https://verify.skilljar.com/c/hfi6k4te2szx",
+      image: "/claude-code-in-action.png",
+      color: "#5b7c53"
+    },
+    {
       title: "Introduction to Internet of Things (Elite Silver)",
       issuer: "NPTEL",
       date: "Jul-Oct 2025",
@@ -41,7 +50,7 @@ const Certificates = () => {
     {
       title: "Java (Basic)",
       issuer: "HackerRank",
-      date: "March 2026",
+      date: "March 15, 2026",
       credentialId: "AE89DA4122AC",
       link: "https://www.hackerrank.com/certificates/ae89da4122ac",
       image: "/hackerrank-java-basic.png",
