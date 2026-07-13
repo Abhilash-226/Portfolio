@@ -4,40 +4,39 @@ import ProjectCard from "../components/ProjectCard";
 const Projects = () => {
   const projects = [
     {
-      title: "MockMitra – AI-Powered Mock Test Platform",
+      title: "MockMitra – AI-Powered Exam Preparation Platform",
       description: [
-        "MockMitra is an intelligent mock test platform designed to help students prepare for competitive exams like EAMCET through personalized and adaptive practice. It combines full-length previous year question (PYQ) paper mocks with AI-generated content to provide a comprehensive and exam-focused preparation experience.",
-        "The platform enables users to attempt both real exam-style PYQ mocks and customized tests generated using Gemini APIs. It leverages a pre-built question pool stored in a scalable NoSQL database (MongoDB), enabling fast test generation with minimal latency while maintaining high-quality and diverse questions.",
-        "Users can navigate through tests in a smooth, real-time interface and gain actionable insights through performance analytics and progress tracking. The system is designed to ensure consistency in question standards and improve preparation efficiency through intelligent question selection."
+        "MockMitra is a context-aware question generation and exam preparation platform designed for competitive exam prep. It operates on a cache-first, template-grounded question generation pipeline, minimizing LLM API costs while guaranteeing sub-millisecond retrieval of pre-validated practice material.",
+        "When the MongoDB question pool has a deficit for a requested topic, the system retrieves historical Previous Year Questions (PYQs) from a YAML database, injects them as prompt context to ground Gemini 2.5 Flash, and runs concurrent worker pools to generate new conceptually similar variations. It validates generated questions via a 2-pass solver consensus using Gemini's thinking budget and filters near-duplicates using a SequenceMatcher text similarity check (ratio < 0.82)."
       ],
       features: [
-        "Full-length PYQ paper mock tests for real exam simulation",
-        "AI-powered personalized test generation using Gemini APIs",
-        "Scalable question pool built from previous year papers",
-        "Efficient and low-latency test creation using MongoDB",
-        "Real-time test interface with seamless navigation",
-        "Performance analytics and progress tracking"
+        "Cache-first question selector using MongoDB compound query indices for sub-millisecond retrieval",
+        "Template-grounded generation utilizing historical PYQ context parsed from YAML blueprints",
+        "2-pass solver verification consensus using Gemini's thinking model to ensure mathematical correctness",
+        "FastAPI background tasks for asynchronous question generation and worker pool orchestration",
+        "Deduplication pipeline enforcing a SequenceMatcher similarity threshold (ratio < 0.82)",
+        "Complete CBT-style test interface with Custom Test, PYQ practice, Analytics, and History tracking modules"
       ],
-      techStack: ["MongoDB (NoSQL)", "FastAPI", "React", "Vite", "Gemini APIs"],
+      techStack: ["React", "FastAPI", "Python", "Gemini 2.5 Flash", "MongoDB", "YAML", "Git"],
       image: null,
       sourceLink: "https://mockmitra.app/",
       sourceLinkText: "Visit MockMitra"
     },
     {
-      title: "StudySphere – Tutor-Student Learning Platform",
+      title: "StudySphere – Full-Stack EdTech Marketplace",
       description: [
-        "StudySphere is a tutor-student platform that connects students with verified tutors for both online and offline learning. It ensures trust through a manual tutor verification process using ID and qualification documents.",
-        "Students can discover tutors, request live sessions, or chat for offline tuition. The platform also features Classrooms, where tutors list their teaching spaces with details like subjects, location, and pricing for group learning."
+        "StudySphere is a premium full-stack EdTech marketplace bridging students and tutors. It features high-fidelity real-time collaboration, cryptographic chat privacy, secure payment escrows, and WebRTC virtual classrooms.",
+        "The platform secures communication by encrypting direct messages with AES-256-CBC prior to database persistence and decrypting them on-the-fly for active Socket.IO websocket clients. It incorporates an escrow-like payment flow via Razorpay API (holding and capturing funds upon student approval of completion), a custom-signed JWT WebRTC video classroom using 8x8 Jitsi As A Service (JaaS), and a database-level validation to prevent tutor scheduling double-bookings."
       ],
       features: [
-        "Role-based student and tutor registration",
-        "Manual tutor verification system",
-        "Online session booking for live classes",
-        "Real-time chat for offline coordination",
-        "Classroom listings for group learning",
-        "Demo class booking and tutor discovery"
+        "Real-time communication using Socket.IO with AES-256-CBC encrypted chat history",
+        "Escrow payment system integrating Razorpay signature verification and capture-hold workflow",
+        "WebRTC classrooms via Jitsi/8x8 JaaS with custom RS256-signed moderator JWT tokens",
+        "Double-booking scheduling prevention via MongoDB overlapping time-range queries",
+        "Tutor and offline classroom discovery using MongoDB 2dsphere index geospatial distance queries",
+        "Student profile completeness tracking and dynamically aggregated tutor rating reviews"
       ],
-      techStack: ["MongoDB", "Node.js", "React", "Socket.IO", "JWT"],
+      techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.IO", "WebRTC (Jitsi)", "Razorpay", "JWT", "Bootstrap 5"],
       image: null,
       sourceLink: "https://studysphere-frontend-gtvp.onrender.com/",
       sourceLinkText: "Visit StudySphere"

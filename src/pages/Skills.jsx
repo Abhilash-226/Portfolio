@@ -4,19 +4,19 @@ const Skills = () => {
   const skillCategories = [
     {
       label: "Programming Languages",
-      skills: ["Java", "Python"],
+      skills: ["Java", "Python", "JavaScript"],
       icon: "bi-code-slash",
       color: "#3b82f6",
     },
     {
       label: "Frontend Technologies",
-      skills: ["HTML", "CSS", "JavaScript", "React.js", "Bootstrap", "Tailwind CSS"],
+      skills: ["HTML", "CSS", "React.js", "Bootstrap", "Tailwind CSS"],
       icon: "bi-window-stack",
       color: "#8b5cf6",
     },
     {
       label: "Backend Technologies",
-      skills: ["Node.js", "Express.js", "FastAPI"],
+      skills: ["Node.js", "Express.js", "FastAPI", "REST APIs"],
       icon: "bi-hdd-rack",
       color: "#10b981",
     },
@@ -25,6 +25,12 @@ const Skills = () => {
       skills: ["MySQL", "MongoDB"],
       icon: "bi-database",
       color: "#f59e0b",
+    },
+    {
+      label: "Tools & Technologies",
+      skills: ["Git", "GitHub", "Socket.IO", "JWT", "Gemini API"],
+      icon: "bi-tools",
+      color: "#06b6d4",
     },
     {
       label: "Course Work",

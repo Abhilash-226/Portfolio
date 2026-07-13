@@ -3,25 +3,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 const Certificates = () => {
   const certificates = [
     {
-      title: "Claude Code in Action",
-      issuer: "Anthropic",
-      date: "March 2026",
-      credentialId: "hfi6k4te2szx",
-      link: "https://verify.skilljar.com/c/hfi6k4te2szx",
-      image: "/claude-code-in-action.png",
-      color: "#5b7c53"
-    },
-    {
-      title: "Java (Basic)",
-      issuer: "HackerRank",
-      date: "March 2026",
-      credentialId: "AE89DA4122AC",
-      link: "https://www.hackerrank.com/certificates/ae89da4122ac",
-      image: "/hackerrank-java-basic.png",
-      color: "#2ec866"
-    },
-    {
-      title: "Introduction to Internet of Things (Elite)",
+      title: "Introduction to Internet of Things (Elite Silver)",
       issuer: "NPTEL",
       date: "Jul-Oct 2025",
       credentialId: "NPTEL25CS147S958200846",
@@ -30,22 +12,13 @@ const Certificates = () => {
       color: "#ffa116"
     },
     {
-      title: "Web Development Course",
+      title: "Full Stack Web development",
       issuer: "Internshala",
       date: "October 2024",
       credentialId: "8duonojqlrd",
       link: "https://trainings.internshala.com/verify_certificate",
       image: "/internshala-web-development.png",
       color: "#0073e6"
-    },
-    {
-      title: "Oracle Cloud Infrastructure",
-      issuer: "Oracle",
-      date: "2024",
-      credentialId: null,
-      link: null,
-      image: "/Oracle cloud.png",
-      color: "#f35e00"
     },
     {
       title: "React, NodeJS, Express & MongoDB - The MERN Fullstack Guide",
@@ -64,6 +37,15 @@ const Certificates = () => {
       link: "https://ude.my/UC-c5ddb17e-9445-4e75-87ac-d831cc8a13b2",
       image: "/udemy-complete-ai-guide.png",
       color: "#a435f0"
+    },
+    {
+      title: "Java (Basic)",
+      issuer: "HackerRank",
+      date: "March 2026",
+      credentialId: "AE89DA4122AC",
+      link: "https://www.hackerrank.com/certificates/ae89da4122ac",
+      image: "/hackerrank-java-basic.png",
+      color: "#2ec866"
     }
   ];
 
@@ -77,16 +59,17 @@ const Certificates = () => {
           </p>
         </div>
         
-        <Row className="g-4">
+        <Row className="g-4 justify-content-center">
           {certificates.map((cert, index) => (
-            <Col key={index} xs={12} sm={6} md={4} lg={3} className="d-flex">
+            <Col key={index} xs={12} sm={6} md={4} lg={4} className="d-flex justify-content-center">
               <Card 
                 className="h-100 border-0 shadow-sm w-100 certificate-card position-relative overflow-hidden d-flex flex-column"
                 style={{ 
                   borderRadius: "16px",
                   border: "1px solid #e2e8f0",
                   backgroundColor: "#ffffff",
-                  transition: "all 0.3s ease"
+                  transition: "all 0.3s ease",
+                  maxWidth: "350px"
                 }}
               >
                 {cert.image ? (
@@ -167,6 +150,41 @@ const Certificates = () => {
               </Card>
             </Col>
           ))}
+        </Row>
+
+        {/* Key Achievements */}
+        <div className="text-center mt-5 mb-4">
+          <h3 className="fw-bold mb-3" style={{ color: "#0f172a" }}>Key Achievements</h3>
+        </div>
+        <Row className="justify-content-center">
+          <Col md={10} lg={8}>
+            <Card className="border-0 shadow-sm p-4" style={{ borderRadius: "16px", border: "1px solid #e2e8f0" }}>
+              <ul className="list-unstyled mb-0 d-flex flex-column gap-3">
+                <li className="d-flex align-items-start">
+                  <div className="bg-primary-subtle text-primary rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style={{ width: "40px", height: "40px", flexShrink: 0, backgroundColor: "rgba(59, 130, 246, 0.15)", color: "#2563eb" }}>
+                    <i className="bi bi-code-slash" style={{ fontSize: "1.2rem" }}></i>
+                  </div>
+                  <div>
+                    <h6 className="fw-bold mb-1" style={{ color: "#1e293b" }}>Competitive Programming & Problem Solving</h6>
+                    <p className="text-muted mb-0" style={{ fontSize: "0.9rem" }}>
+                      Solved 430+ algorithmic problems across LeetCode and GeeksforGeeks, focusing on data structures, algorithms, and logical problem-solving.
+                    </p>
+                  </div>
+                </li>
+                <li className="d-flex align-items-start border-top pt-3">
+                  <div className="bg-primary-subtle text-primary rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style={{ width: "40px", height: "40px", flexShrink: 0, backgroundColor: "rgba(59, 130, 246, 0.15)", color: "#2563eb" }}>
+                    <i className="bi bi-award-fill" style={{ fontSize: "1.2rem" }}></i>
+                  </div>
+                  <div>
+                    <h6 className="fw-bold mb-1" style={{ color: "#1e293b" }}>NPTEL Elite Silver Badge</h6>
+                    <p className="text-muted mb-0" style={{ fontSize: "0.9rem" }}>
+                      Awarded Elite Silver Badge in Introduction to Internet of Things from NPTEL for scoring 75%.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </Card>
+          </Col>
         </Row>
       </Container>
     </section>

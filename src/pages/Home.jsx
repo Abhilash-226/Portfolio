@@ -60,9 +60,7 @@ const Home = () => {
                   maxWidth: "520px",
                 }}
               >
-                Computer Science student at CBIT, Hyderabad — skilled in Java,
-                Python, MERN stack, and DSA. Passionate about building scalable
-                applications and exploring AI/ML engineering.
+                Computer Science undergraduate at CBIT, Hyderabad with hands-on experience building and deploying full-stack web applications and AI-powered systems. Proficient in the MERN Stack, FastAPI, and REST API design.
               </p>
               <div className="d-flex gap-3 justify-content-center justify-content-md-start flex-wrap">
                 <Button
