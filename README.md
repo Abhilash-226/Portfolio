@@ -1,128 +1,79 @@
-# Portfolio Website
+# Professional Portfolio - Ashadapu Abhilash
 
-A modern, responsive portfolio website built with React, Vite, and Bootstrap.
+A clean, modern, and professional portfolio website showcasing my experience, projects, skills, and achievements. Built with **React**, **Vite**, **Bootstrap 5**, and custom CSS.
 
-## Features
+## 🚀 Live Demo
 
-- **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
-- **Modern UI**: Clean and professional design using Bootstrap components
-- **Smooth Navigation**: Fixed navigation bar with smooth scrolling
-- **Project Showcase**: Interactive project cards with live demo and source code links
-- **Contact Form**: Functional contact form for visitor inquiries
-- **Skills Section**: Organized display of technical skills and technologies
+- **Portfolio Website**: [https://github.com/Abhilash-226](https://github.com/Abhilash-226)
 
-## Sections
+---
 
-1. **Home/Hero**: Introduction with name, title, and call-to-action buttons
-2. **About**: Personal background and professional summary
-3. **Skills**: Technical skills organized by category (Frontend, Backend, Database, Tools)
-4. **Projects**: Portfolio of work with descriptions, tech stacks, and links
-5. **Contact**: Contact form for visitor messages
+## 🛠️ Main Projects
 
-## Technologies Used
+### 1. **MockMitra – AI-Powered Mock Test Platform**
+*An intelligent mock test platform designed to help students prepare for competitive exams like EAMCET through personalized and adaptive practice. It combines full-length previous year question (PYQ) paper mocks with AI-generated content.*
+- **Key Features:**
+  - Full-length PYQ paper mock tests for real exam simulation
+  - AI-powered personalized test generation using Gemini APIs
+  - Scalable question pool built from previous year papers
+  - Efficient and low-latency test creation using MongoDB
+  - Real-time test interface with seamless navigation
+  - Performance analytics and progress tracking
+- **Tech Stack:** MongoDB (NoSQL database), FastAPI, React, Vite, Gemini APIs
+- **Live Platform:** [https://mockmitra.app/](https://mockmitra.app/)
 
-- **Frontend**: React 18, Vite, Bootstrap 5
-- **Styling**: Bootstrap CSS with custom CSS enhancements
-- **Build Tool**: Vite for fast development and optimized builds
-- **Package Manager**: npm
+### 2. **StudySphere – Tutor-Student Learning Platform**
+*A tutor-student platform that connects students with verified tutors for both online and offline learning. It ensures trust through a manual tutor verification process using ID and qualification documents.*
+- **Key Features:**
+  - Role-based student and tutor registration
+  - Manual tutor verification system
+  - Online session booking for live classes
+  - Real-time chat for offline coordination
+  - Classroom listings for group learning
+  - Demo class booking and tutor discovery
+- **Tech Stack:** MongoDB, Node.js, React, Socket.IO, JWT
+- **Live Platform:** [https://studysphere-frontend-gtvp.onrender.com/](https://studysphere-frontend-gtvp.onrender.com/)
 
-## Getting Started
+---
+
+## 💻 Tech Skills & Core Competencies
+
+- **Programming Languages**: Java, Python
+- **Frontend Technologies**: HTML, CSS, JavaScript, React.js, Bootstrap, Tailwind CSS
+- **Backend Technologies**: Node.js, Express.js, FastAPI
+- **Databases**: MySQL, MongoDB
+- **Course Work**: Data Structures & Algorithms (DSA), Object-Oriented Programming (OOP), DBMS, Operating Systems, Computer Networks
+
+---
+
+## 🛠️ Getting Started Locally
 
 ### Prerequisites
-
-- Node.js (version 14 or higher)
+- Node.js (v14 or higher)
 - npm
 
-### Installation
+### Installation & Run
 
 1. Clone the repository:
-
    ```bash
-   git clone <your-repo-url>
-   cd portfolio
+   git clone https://github.com/Abhilash-226/Portfolio.git
+   cd Portfolio
    ```
 
 2. Install dependencies:
-
    ```bash
    npm install
    ```
 
-3. Start the development server:
-
+3. Start the Vite development server:
    ```bash
    npm run dev
    ```
 
-4. Open your browser and visit `http://localhost:5173`
+4. Build for production:
+   ```bash
+   npm run build
+   ```
 
-### Building for Production
-
-```bash
-npm run build
-```
-
-The built files will be in the `dist` directory.
-
-## Customization
-
-### Personal Information
-
-- Update `src/components/Header.jsx` with your name
-- Modify `src/pages/Home.jsx` with your personal details
-- Edit `src/pages/About.jsx` with your background story
-- Update `src/pages/Skills.jsx` with your technical skills
-- Replace project data in `src/pages/Projects.jsx` with your actual projects
-
-### Styling
-
-- Custom styles are in `src/index.css`
-- Bootstrap classes are used throughout components
-- You can customize the Bootstrap theme or add your own CSS
-
-### Adding Your Photo
-
-- Add your professional photo to `src/assets/`
-- Update the photo placeholder in `src/pages/Home.jsx`
-
-### Contact Form
-
-- The contact form currently shows an alert on submission
-- To make it functional, you'll need to implement a backend service or use a service like Netlify Forms, Formspree, or EmailJS
-
-## Deployment
-
-This project can be deployed to various platforms:
-
-- **Vercel**: Connect your GitHub repository for automatic deployments
-- **Netlify**: Drag and drop the `dist` folder or connect via Git
-- **GitHub Pages**: Use GitHub Actions to build and deploy
-- **Other platforms**: Any static hosting service that supports Single Page Applications
-
-## Project Structure
-
-```
-src/
-├── components/          # Reusable React components
-│   ├── Header.jsx      # Navigation bar
-│   ├── Footer.jsx      # Footer component
-│   ├── ProjectCard.jsx # Project display card
-│   └── ContactForm.jsx # Contact form
-├── pages/              # Main page components
-│   ├── Home.jsx        # Hero/landing section
-│   ├── About.jsx       # About section
-│   ├── Skills.jsx      # Skills section
-│   └── Projects.jsx    # Projects section
-├── assets/             # Static assets (images, icons)
-├── App.jsx             # Main app component
-├── main.jsx            # App entry point
-└── index.css           # Global styles
-```
-
-## Contributing
-
-Feel free to fork this project and customize it for your own portfolio. If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
+## 📄 License
+This project is open-source and licensed under the MIT License.
