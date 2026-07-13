@@ -31,11 +31,11 @@ const Certificates = () => {
     },
     {
       title: "Web Development Course",
-      issuer: "Internshala / Scholiverse",
+      issuer: "Internshala",
       date: "October 2024",
-      credentialId: "uvtgjcmbzl184d8o",
-      link: null,
-      image: "/Internshala-web develpment.png",
+      credentialId: "8duonojqlrd",
+      link: "https://trainings.internshala.com/verify_certificate",
+      image: "/internshala-web-development.png",
       color: "#0073e6"
     },
     {
@@ -48,12 +48,12 @@ const Certificates = () => {
       color: "#f35e00"
     },
     {
-      title: "MERN Stack Course",
+      title: "React, NodeJS, Express & MongoDB - The MERN Fullstack Guide",
       issuer: "Udemy",
-      date: "2024",
-      credentialId: null,
-      link: null,
-      image: "/Udemy-MERN stack.png",
+      date: "July 2025",
+      credentialId: "UC-57418ff9-b0c9-41ea-8368-5a58d48057dd",
+      link: "https://ude.my/UC-57418ff9-b0c9-41ea-8368-5a58d48057dd",
+      image: "/udemy-mern-stack.png",
       color: "#a435f0"
     },
     {
