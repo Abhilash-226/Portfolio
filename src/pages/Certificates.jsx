@@ -8,7 +8,7 @@ const Certificates = () => {
       date: "March 2026",
       credentialId: "hfi6k4te2szx",
       link: "https://verify.skilljar.com/c/hfi6k4te2szx",
-      image: null,
+      image: "/claude-code-in-action.png",
       color: "#5b7c53"
     },
     {
@@ -17,7 +17,7 @@ const Certificates = () => {
       date: "March 2026",
       credentialId: "AE89DA4122AC",
       link: "https://www.hackerrank.com/certificates/ae89da4122ac",
-      image: null,
+      image: "/hackerrank-java-basic.png",
       color: "#2ec866"
     },
     {
@@ -26,7 +26,7 @@ const Certificates = () => {
       date: "Jul-Oct 2025",
       credentialId: "NPTEL25CS147S958200846",
       link: "https://nptel.ac.in/noc/",
-      image: null,
+      image: "/nptel-iot.png",
       color: "#ffa116"
     },
     {
@@ -59,10 +59,10 @@ const Certificates = () => {
     {
       title: "The Complete AI Guide: Learn ChatGPT, Generative AI & More",
       issuer: "Udemy",
-      date: "2024",
-      credentialId: null,
-      link: null,
-      image: null,
+      date: "Dec 2025",
+      credentialId: "UC-c5ddb17e-9445-4e75-87ac-d831cc8a13b2",
+      link: "https://ude.my/UC-c5ddb17e-9445-4e75-87ac-d831cc8a13b2",
+      image: "/udemy-complete-ai-guide.png",
       color: "#a435f0"
     }
   ];
