@@ -3,73 +3,176 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 const Certificates = () => {
   const certificates = [
     {
-      title: "Future Interns Internship",
-      image: "/Future Interns Internship.png",
-      description: "Completed internship program with Future Interns",
+      title: "Claude Code in Action",
+      issuer: "Anthropic",
+      date: "March 2026",
+      credentialId: "hfi6k4te2szx",
+      link: "https://verify.skilljar.com/c/hfi6k4te2szx",
+      image: null,
+      color: "#5b7c53"
     },
     {
-      title: "Internshala Web Development",
+      title: "Java (Basic)",
+      issuer: "HackerRank",
+      date: "March 2026",
+      credentialId: "AE89DA4122AC",
+      link: "https://www.hackerrank.com/certificates/ae89da4122ac",
+      image: null,
+      color: "#2ec866"
+    },
+    {
+      title: "AINCAT 2026 Career Aptitude Test",
+      issuer: "Naukri Campus",
+      date: "June 2026",
+      credentialId: "6a198d05542fee52d123f364",
+      link: null,
+      image: null,
+      color: "#e22e5d"
+    },
+    {
+      title: "Introduction to Internet of Things (Elite)",
+      issuer: "NPTEL",
+      date: "Jul-Oct 2025",
+      credentialId: "NPTEL25CS147S958200846",
+      link: "https://nptel.ac.in/noc/",
+      image: null,
+      color: "#ffa116"
+    },
+    {
+      title: "Web Development Course",
+      issuer: "Internshala / Scholiverse",
+      date: "October 2024",
+      credentialId: "uvtgjcmbzl184d8o",
+      link: null,
       image: "/Internshala-web develpment.png",
-      description: "Web Development certification from Internshala",
+      color: "#0073e6"
+    },
+    {
+      title: "Future Interns Internship",
+      issuer: "Future Interns",
+      date: "2024",
+      credentialId: null,
+      link: null,
+      image: "/Future Interns Internship.png",
+      color: "#3b82f6"
     },
     {
       title: "Oracle Cloud Infrastructure",
+      issuer: "Oracle",
+      date: "2024",
+      credentialId: null,
+      link: null,
       image: "/Oracle cloud.png",
-      description: "Oracle Cloud certification",
+      color: "#f35e00"
     },
     {
-      title: "Udemy MERN Stack",
+      title: "MERN Stack Course",
+      issuer: "Udemy",
+      date: "2024",
+      credentialId: null,
+      link: null,
       image: "/Udemy-MERN stack.png",
-      description: "MERN Stack development course completion",
-    },
+      color: "#a435f0"
+    }
   ];
 
   return (
-    <section id="certificates" className="py-5">
+    <section id="certificates" className="py-5 bg-white">
       <Container>
-        <h2 className="text-center section-header mb-5">
-          Certificates & Achievements
-        </h2>
+        <div className="text-center mb-5">
+          <h2 className="section-header mb-3">Certificates & Achievements</h2>
+          <p className="text-muted" style={{ fontSize: "1.05rem" }}>
+            Validations of my skills, coursework, and career achievements
+          </p>
+        </div>
+        
         <Row className="g-4">
           {certificates.map((cert, index) => (
-            <Col md={6} lg={3} key={index}>
-              <Card className="h-100 border-0 shadow-sm certificate-card position-relative overflow-hidden">
-                <div
-                  className="certificate-img-container"
-                  style={{ height: "220px", overflow: "hidden" }}
-                >
-                  <Card.Img
-                    variant="top"
-                    src={cert.image}
-                    alt={cert.title}
-                    className="w-100 h-100"
-                    style={{
-                      objectFit: "contain",
-                      padding: "15px",
-                      transition: "transform 0.3s ease",
-                    }}
-                  />
-                </div>
-                <Card.Body className="text-center p-4">
-                  <div className="mb-2">
-                    <i className="bi bi-award-fill text-warning fs-4"></i>
+            <Col key={index} xs={12} sm={6} md={4} lg={3} className="d-flex">
+              <Card 
+                className="h-100 border-0 shadow-sm w-100 certificate-card position-relative overflow-hidden d-flex flex-column"
+                style={{ 
+                  borderRadius: "16px",
+                  border: "1px solid #e2e8f0",
+                  backgroundColor: "#ffffff",
+                  transition: "all 0.3s ease"
+                }}
+              >
+                {cert.image ? (
+                  <div 
+                    className="certificate-img-container d-flex align-items-center justify-content-center"
+                    style={{ height: "160px", overflow: "hidden", backgroundColor: "#f8fafc", padding: "10px" }}
+                  >
+                    <Card.Img 
+                      variant="top" 
+                      src={cert.image} 
+                      alt={cert.title} 
+                      style={{ objectFit: "contain", maxHeight: "100%", maxWidth: "100%" }}
+                    />
                   </div>
-                  <Card.Title className="h6 fw-bold mb-2">
+                ) : (
+                  <div 
+                    className="d-flex flex-column align-items-center justify-content-center text-white p-4"
+                    style={{ 
+                      height: "160px", 
+                      background: `linear-gradient(135deg, ${cert.color || "#3b82f6"} 0%, ${cert.color ? cert.color + "dd" : "#2563eb"} 100%)` 
+                    }}
+                  >
+                    <i className="bi bi-award-fill" style={{ fontSize: "3rem" }}></i>
+                    <span className="mt-2 fw-semibold" style={{ fontSize: "0.85rem", letterSpacing: "0.05em", textTransform: "uppercase" }}>
+                      {cert.issuer}
+                    </span>
+                  </div>
+                )}
+                
+                <Card.Body className="p-4 d-flex flex-column flex-grow-1">
+                  <h6 className="fw-bold mb-1" style={{ color: "#1e293b", fontSize: "0.95rem", lineHeight: 1.4 }}>
                     {cert.title}
-                  </Card.Title>
-                  <Card.Text className="small text-muted">
-                    {cert.description}
-                  </Card.Text>
+                  </h6>
+                  <p className="text-muted mb-3" style={{ fontSize: "0.8rem", fontWeight: 500 }}>
+                    Issued by {cert.issuer} {cert.date && `• ${cert.date}`}
+                  </p>
+                  
+                  {cert.credentialId && (
+                    <p className="mb-4" style={{ fontSize: "0.75rem", fontFamily: "monospace", color: "#64748b" }}>
+                      ID: {cert.credentialId}
+                    </p>
+                  )}
+                  
+                  <div className="mt-auto">
+                    {cert.link ? (
+                      <a 
+                        href={cert.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="btn w-100 py-2 d-flex align-items-center justify-content-center"
+                        style={{ 
+                          fontSize: "0.8rem", 
+                          backgroundColor: "#f1f5f9", 
+                          color: "#334155", 
+                          borderRadius: "10px", 
+                          border: "none",
+                          fontWeight: 500
+                        }}
+                      >
+                        <i className="bi bi-patch-check-fill me-1.5" style={{ color: cert.color || "#3b82f6" }}></i>
+                        Verify Credential
+                      </a>
+                    ) : (
+                      <div 
+                        className="w-100 py-2 text-center text-muted"
+                        style={{ 
+                          fontSize: "0.8rem", 
+                          backgroundColor: "#f8fafc", 
+                          borderRadius: "10px",
+                          border: "1px dashed #e2e8f0"
+                        }}
+                      >
+                        Verified
+                      </div>
+                    )}
+                  </div>
                 </Card.Body>
-                <div
-                  className="position-absolute top-0 end-0 p-2"
-                  style={{
-                    background: "linear-gradient(45deg, #667eea, #2563eb)",
-                    borderRadius: "0 0 0 10px",
-                  }}
-                >
-                  <i className="bi bi-check-circle-fill text-white"></i>
-                </div>
               </Card>
             </Col>
           ))}
